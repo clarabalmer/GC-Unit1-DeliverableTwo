@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class CoinFlip {
 
@@ -10,8 +11,19 @@ public class CoinFlip {
 		int numberOfFlips = scnr.nextInt();
 		
 		int correctCount;
+		Random rand = new Random();
 		
-		
+		//for loop generates random integer each loop.
+		//if integer is even, print heads. If odd, print tails.
+		for(int i = 0; i < numberOfFlips; i++) {
+			int randomFlip = rand.nextInt() % 2;
+			
+			if (randomFlip == 0) {
+				System.out.println("heads");
+			} else {
+				System.out.println("tails");
+			}
+		}
 		
 		
 		
